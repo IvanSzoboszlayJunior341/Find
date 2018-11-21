@@ -27,13 +27,13 @@ namespace Find.Models
         public string Senha { get; set; }
 
         public string Foto { get; set; }
-        [Required]
-        [ForeignKey("Pagamento")]
-        public int idPagamento { get; set;}
+       
         public ICollection<Pagamento> Pagamento { get; set; }
 
         [Required]
         public ICollection<Acesso> Acesso { get; set;}
         public ICollection<Pergunta> Pergunta { get; set; }
+
+        public ICollection<Resposta> Resposta { get; set; }
     }
 }

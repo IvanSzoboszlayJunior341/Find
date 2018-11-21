@@ -10,13 +10,11 @@ namespace Find.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required]
-        [ForeignKey("Usuario")]
-        public int idUser { get; set; }
+        [ForeignKey("idUsuario")]
+        public int idUsuario { get; set; }
         public Usuario Usuario { get; set; }
-        [Required]
-        [ForeignKey("Curso")]
+        [ForeignKey("idCurso")]
         public int idCurso { get; set;}
-        public ICollection<Curso> Curso { get; set; }
+        public Curso Curso { get; set; }
     }
 }

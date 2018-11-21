@@ -18,8 +18,7 @@ namespace Find.Models
         [StringLength(255)]
         public string aulaCaminho { get; set; }
         public string vistoAula { get; set; }
-        [Required]
-        [ForeignKey("Curso")]
+        [ForeignKey("idCurso")]
         public int idCurso { get; set; }
         public Curso Curso { get; set; }
         public ICollection<Pergunta> Pergunta { get; set; }

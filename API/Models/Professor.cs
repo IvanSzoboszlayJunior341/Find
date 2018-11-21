@@ -21,5 +21,6 @@ namespace Find.Models
         public string Senha { get; set; }
         [Required]
         public ICollection<CursoProfessor> CursoProfessor { get; set; }
+        public ICollection<Resposta> Resposta { get; set; }
     }
 }

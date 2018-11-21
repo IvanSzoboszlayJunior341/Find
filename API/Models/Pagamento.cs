@@ -22,6 +22,8 @@ namespace Find.Models
         // Vamos criar um campo para guardar a opção de pagamento do cliente, sendo elas PayPal ou PagSeguro
         [StringLength(30, MinimumLength = 2, ErrorMessage = "Você deve selecionar uma forma de pagamento!")]
         public string formaPagamento { get; set; }
+        [ForeignKey("IdUsuario")]
+        public int IdUsuario{get;set;}
         [Required]
         public Usuario Usuario { get; set; }
     }
