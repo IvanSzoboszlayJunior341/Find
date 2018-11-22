@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Find.Data;
 using Find.Models;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace API
 {
@@ -29,7 +30,7 @@ namespace API
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<APIContexto>(opt => 
+            services.AddDbContext<APIContexto>(opt =>
                 opt.UseMySql(Configuration.GetConnectionString("bancodados"))
                 );
             services.AddMvc();

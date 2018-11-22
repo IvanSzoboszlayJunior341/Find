@@ -23,7 +23,6 @@ namespace Find.Models
         public ICollection<Aula> Aula { get; set; }
         public int Progresso { get; set; }
         public string Categoria { get; set; }
-        [Required]
         public ICollection<Acesso> Acesso { get; set; }
     }
 }

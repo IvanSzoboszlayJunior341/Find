@@ -19,7 +19,6 @@ namespace Find.Models
         [Required]
         [StringLength(255, ErrorMessage = "Você deve inserir uma senha")]
         public string Senha { get; set; }
-        [Required]
         public ICollection<CursoProfessor> CursoProfessor { get; set; }
         public ICollection<Resposta> Resposta { get; set; }
     }

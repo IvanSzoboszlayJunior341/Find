@@ -12463,11 +12463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\paulo.rflima1\\Desktop\\FIND\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\paulo.rflima1\\Desktop\\FIND\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\Users\\paulo.rflima1\\Desktop\\FIND\\API\\API.csproj",
+      "projectPath": "C:\\Users\\paulo.rflima1\\Desktop\\FIND\\API\\API.csproj",
       "packagesPath": "C:\\Users\\paulo.rflima1\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\paulo.rflima1\\Desktop\\FIND\\API\\obj\\",
+      "outputPath": "C:\\Users\\paulo.rflima1\\Desktop\\FIND\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

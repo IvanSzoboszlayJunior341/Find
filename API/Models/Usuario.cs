@@ -30,7 +30,6 @@ namespace Find.Models
        
         public ICollection<Pagamento> Pagamento { get; set; }
 
-        [Required]
         public ICollection<Acesso> Acesso { get; set;}
         public ICollection<Pergunta> Pergunta { get; set; }
 
