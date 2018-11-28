@@ -43,5 +43,43 @@ namespace Find.Controllers
             else
                 return Ok(usuario);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar([FromBody] Usuario usuario, int id)
+        {
+            if(!ModelState.IsValid)
+                return BadRequest("Não foi possível atualizar os dados, pois eles não seguem o padrão de atualização!");
+            
+            var user = contexto.Usuario.Where(us => us.Id == id).FirstOrDefault();
+
+            user.nomeUsuario = usuario.nomeUsuario;
+            user.CPF = usuario.CPF;
+            user.Foto = usuario.Foto;
+            user.Email  = usuario.Email;
+            user.Senha = usuario.Senha;
+            contexto.Usuario.Update(user);
+            int rs = contexto.SaveChanges();
+
+            if(rs < 1)
+                return BadRequest("Houve uma falha interna e não foi possível atualizar");
+            else
+                return Ok(usuario);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Apagar([FromBody] Usuario usuario, int id)
+        {
+            var user = contexto.Usuario.Where(us => us.Id == id).FirstOrDefault();
+            if(user == null)
+                return BadRequest("Usuário não existe!");
+
+            contexto.Usuario.Remove(user);
+            int rs = contexto.SaveChanges();
+
+            if(rs > 0)
+                return Ok();
+            else
+                return BadRequest();
+        }
     }
 }

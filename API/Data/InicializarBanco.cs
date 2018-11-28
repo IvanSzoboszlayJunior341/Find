@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Find.Models;
 
@@ -28,6 +29,17 @@ namespace Find.Data
                 Senha = "1234"
             };
             contexto.Professor.Add(professor);
+            contexto.SaveChanges();
+
+            var pagamento = new Pagamento()
+            {
+                dataPagamento = DateTime.Now,
+                statusPagamento = "Ativo",
+                codTransacao = "216846232",
+                valorPagamento = 100.00,
+                IdUsuario = 1
+            };
+            contexto.Pagamento.Add(pagamento);
             contexto.SaveChanges();
         }
     }

@@ -24,7 +24,6 @@ namespace Find.Models
         public string formaPagamento { get; set; }
         [ForeignKey("IdUsuario")]
         public int IdUsuario{get;set;}
-        [Required]
         public Usuario Usuario { get; set; }
     }
 }
