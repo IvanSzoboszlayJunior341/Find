@@ -39,5 +39,20 @@ namespace Find.Controllers
             
             return rs;
         }
+
+        [HttpPost]
+        public IActionResult Cadastro([FromBody] Pagamento pagamento)
+        {
+            if(!ModelState.IsValid)
+                return BadRequest("Não foi possível enviar os dados para cadastro");
+            
+            contexto.Pagamento.Add(pagamento);
+            int rs = contexto.SaveChanges();
+
+            if(rs < 1)
+                return BadRequest("Houve uma falha interna e não foi possível passar os dados");
+            else
+                return Ok(pagamento);
+        }
     }
 }

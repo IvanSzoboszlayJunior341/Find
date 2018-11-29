@@ -100,6 +100,7 @@ namespace Find.Controllers
                     accessToken = token,
                     message = "Ok"
                 };
+
                 return Ok(retorno);
             }
             else
@@ -184,6 +185,5 @@ namespace Find.Controllers
                 return BadRequest(retorno);
             }
         }
-
     }
 }
